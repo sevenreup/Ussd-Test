@@ -1,13 +1,10 @@
 ﻿using StackExchange.Redis;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace TestUssd.Core
 {
-    public class RedisStore
+    public class RedisStore : IUssdCacheStore
     {
         private readonly IConnectionMultiplexer _redis;
         private readonly IDatabase _db;
